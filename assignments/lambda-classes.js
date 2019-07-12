@@ -32,7 +32,7 @@ class Person {
     catchPhrase: `Don't underestimate my power`
   });
 
-console.log();
+console.log(Instructor);
 
 class Student extends Person {
     constructor(studentAttributes){
@@ -51,5 +51,20 @@ class Student extends Person {
 
     sprintChallenge(subject) {
         console.log(`${this.name} has begun sprint challenge on ${subject}.`);
+    }
+}
+
+class ProjectManager extends Person {
+    constructor(PmAttributes) {
+        super(PmAttributes);
+        this.gradClassName = PmAttributes.gradClassName;
+        this.favInstructor = PmAttributes.favInstructor;
+        this.name = PmAttributes.name;
+    }
+    standUp(channel) {
+        return `${name} announces to ${channel}, @channel stand times!​​​​​`;
+    }
+    debugsCode(student, subject) {
+        return `${student.name}'s code on ${subject}`;
     }
 }
